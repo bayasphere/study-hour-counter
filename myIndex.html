@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="myIndex.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Study Hour Counter</title>
+  </head>
+
+  <body>
+    <!-- GOAL SELECTION PAGE -->
+    <section id="setup-page">
+      <nav>
+        <h3>Study Hour Counter</h3>
+        <button id="setup-progress-btn" onclick="progress('setup')">
+          Progress
+        </button>
+      </nav>
+
+      <h2>Study Hour Counter</h2>
+      <h1>set your goal</h1>
+
+      <div class="hour-input">
+        <button id="minus" onclick="decrementHour()">−</button>
+        <span id="hours">0</span>
+        <button id="plus" onclick="incrementHour()">+</button>
+        <span class="unit">h</span>
+      </div>
+
+      <button id="check-btn" onclick="startBtn()">CHECK</button>
+
+      <!-- PROGRESS PANEL FOR SETUP PAGE -->
+      <div id="setup-progress-panel" class="progress-panel">
+        <h3>Today's Progress</h3>
+
+        <p id="setup-hour-studied">Studied 0h 0min</p>
+
+        <div id="setup-progress-list"></div>
+      </div>
+    </section>
+
+    <!-- STUDY / COUNTDOWN PAGE -->
+    <section id="home-page">
+      <nav>
+        <h3>Study Hour Counter</h3>
+        <button id="home-progress-btn" onclick="progress('home')">
+          Progress
+        </button>
+      </nav>
+
+      <!-- PROGRESS PANEL FOR STUDY PAGE -->
+      <div id="home-progress-panel" class="progress-panel">
+        <h3>Today's Progress</h3>
+
+        <p id="home-hour-studied">Studied 0h 0min</p>
+
+        <div id="home-progress-list"></div>
+      </div>
+
+      <p id="count-down"></p>
+
+      <div class="counter">
+        <h1 id="count-el">0</h1>
+
+        <div class="btn-sec">
+          <button id="increment-btn" onclick="stopStudy()">Finished</button>
+        </div>
+      </div>
+
+      <div id="goal">0/0 : goal</div>
+    </section>
+
+    <script src="myIndex.js"></script>
+  </body>
+</html>
